@@ -1,7 +1,5 @@
 package main
 
-//calculations "github.com/timoteoBone/homeprj/8-calculator"
-
 import (
 	"fmt"
 )

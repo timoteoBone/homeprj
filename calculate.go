@@ -4,9 +4,12 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	calculate "github.com/timoteoBone/homeprj/8-calculator"
 )
 
 func main() {
+	// write firt the operator we want to use, then all the numbers we want
 	nums := []int{}
 	for _, num := range os.Args[2:] {
 		aux, err := strconv.Atoi(num)
@@ -28,13 +31,13 @@ func operate(operador string, numeros []int) (int, error) {
 	var result int
 	switch operador {
 	case "+":
-		result = Sumar(numeros)
+		result = calculate.Sumar(numeros)
 	case "-":
-		result = Restar(numeros)
+		result = calculate.Restar(numeros)
 	case "/":
-		result, error = Dividir(numeros[0], numeros[1])
+		result, error = calculate.Dividir(numeros[0], numeros[1])
 	case "++":
-		result = Multiplicar(numeros)
+		result = calculate.Multiplicar(numeros)
 	}
 
 	return result, error
