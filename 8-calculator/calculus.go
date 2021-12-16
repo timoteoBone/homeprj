@@ -1,5 +1,9 @@
 package calculus
 
+import (
+	errors "github.com/timoteoBone/homeprj/newErrors"
+)
+
 func Sumar(nums []int) int {
 	suma := 0
 	for _, num := range nums {
@@ -20,7 +24,7 @@ func Dividir(num1, num2 int) (int, error) {
 	if num2 != 0 {
 		return num1 / num2, nil
 	}
-	return 0, ErrZeroDivision
+	return 0, &errors.InternalError{}
 }
 
 func Multiplicar(nums []int) int {
