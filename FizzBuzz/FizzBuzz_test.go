@@ -7,6 +7,7 @@ import (
 )
 
 func TestFizzNumber(t *testing.T) {
+
 	testCases := []struct {
 		name           string
 		input          int
